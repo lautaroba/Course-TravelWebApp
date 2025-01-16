@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>TravelWebHome</title>
-  <link rel="stylesheet" href="./home.css">
+  <link rel="stylesheet" href="./styles/home.css">
 </head>
 <body>
     <header class="navbar">
@@ -20,15 +20,18 @@
         </div>
     </header>
     <div class="sidebar">
-        <a href=""><img src="./twitter.png"></a>
-        <a href=""><img src="./facebook.png"></a>
-        <a href=""><img src="./instagram.png"></a>
-        <a href=""><img src="./youtube.png"></a>
+        <a href=""><img src="./components/twitter.png"></a>
+        <a href=""><img src="./components/facebook.png"></a>
+        <a href=""><img src="./components/instagram.png"></a>
+        <a href=""><img src="./components/youtube.png"></a>
     </div>
-    <div class="mainContainer">
-        <h1>EXPLORE <br> DREAM <br> DESTINATION</h1>
-        <p>It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder</p>
-        <button id='btnBook'>BOOK NOW</button>
+    <div class="wrapper">
+        <div class="mainContainer">
+            <h1>EXPLORE <br> DREAM <br> DESTINATION</h1>
+            <p>It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder</p>
+            <button id='btnBook'>BOOK NOW</button>
+        </div>
+        <div id="resultDiv"></div>
     </div>
     <script src="./travel_recommendation.js"></script>
 </body>

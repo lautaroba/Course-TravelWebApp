@@ -8,7 +8,7 @@
   body {
     font-family: Arial, sans-serif;
     color: #ffffff;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(255, 255, 255, 0)), url('./background.jpg'); /* Replace with your image */
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(255, 255, 255, 0)), url('../components/background.jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
   }
@@ -105,6 +105,14 @@
     filter: brightness(0) invert(0.7);
   }
 
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+    gap: 20rem;
+  }
+
   .mainContainer {
     text-align: left;
     display: flex;
@@ -147,3 +155,51 @@
     background-color: #005f7f;
   }
   
+  #resultDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 6rem;
+}
+
+.resultCard {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 30rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resultCard img {
+  width: 30rem;
+  height: 20rem;
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+}
+
+.resultCard h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.resultCard p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.btnVisit {
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0.5rem 0;
+}
+
+.btnVisit:hover {
+  background-color: #005f7f;
+}

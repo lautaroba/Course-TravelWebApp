@@ -8,7 +8,7 @@
   body {
     font-family: Arial, sans-serif;
     color: #ffffff;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(255, 255, 255, 0)), url('./background.jpg'); /* Replace with your image */
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(255, 255, 255, 0)), url('../components/background.jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
     min-width: 1300px;
@@ -80,89 +80,91 @@
   .mainContainer {
     text-align: left;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: left;
     align-items: left;
     height: 100vh;
     padding: 2rem;
     color: white;
+    gap: 10rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     margin-left: 4rem;
   }
-  
+  .textWrap{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 2rem;
+  }
   .mainContainer h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
     line-height: 1.2;
   }
-  
-  .mainContainer p {
-    font-size: 1.2rem;
-    margin: 1rem 0;
-  }
 
-  .textWrap{
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    padding: 1rem;
-    max-width: 1050px;
-  }
+.mainContainer p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
 
-  .cardContainer {
-    text-align: left;
-    align-items: left;
-    margin: 2rem;
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-  
-  .card {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    padding: 1rem;
-    text-align: center;
-    color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    width: 250px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
-  }
-  
-  .card img {
-    width: 50%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    filter: invert(0.7);
-  }
-  
-  .card h4 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .card p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .card button {
-    background-color: #008CBA;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .card button:hover {
-    background-color: #005f7f;
-  }
-  
+/* Form Container */
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  color: #ffffff;
+}
+
+form label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 1rem;
+}
+
+form textarea {
+  resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #008cba;
+  box-shadow: 0 0 5px rgba(0, 140, 186, 0.5);
+}
+
+form button {
+  background-color: #008cba;
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #005f7f;
+}
