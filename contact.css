@@ -11,8 +11,9 @@
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(255, 255, 255, 0)), url('./background.jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
+    min-width: 1300px;
   }
-  /* Navbar Styles */
+ 
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -22,11 +23,6 @@
     position: fixed;
     width: 100%;
     z-index: 10;
-  }
-  
-  .navbar h3 {
-    color: white;
-    font-size: 1.5rem;
   }
   
   .navbar nav a {
@@ -39,36 +35,11 @@
   .navbar nav a:hover {
     text-decoration: underline;
   }
-  
-  .navbar div {
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 2rem;
-    padding: 0.5rem 1rem;
-  }
-  
-  .navbar input[type="text"] {
-    padding: 0.5rem;
-    margin-right: 0.5rem;
-    border: none;
-  }
-  
-  .navbar button {
-    padding: 0.5rem 1rem;
-    margin-left: 0.5rem;
-    background-color: #008CBA;
-    border: none;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
+
   .navbar button:hover {
     background-color: #005f7f;
   }
   
-  /* Sidebar Styles */
   .sidebar {
     position: fixed;
     top: 50%;
@@ -105,12 +76,11 @@
   .sidebar img:hover {
     filter: brightness(0) invert(0.7);
   }
-  
-  /* Main Container Styles */
+
   .mainContainer {
     text-align: left;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: left;
     height: 100vh;
@@ -125,27 +95,68 @@
     margin-bottom: 1rem;
     line-height: 1.2;
   }
-  
-  .mainContainer p {
-    font-size: 1.2rem;
-    margin: 1rem 0;
-    max-width: 600px;
-  }
-  
-  #btnBook {
-    padding: 1rem 2rem;
-    background-color: #008CBA;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 10rem;
-    height: 3.5rem;
-  }
-  
-  #btnBook:hover {
-    background-color: #005f7f;
-  }
-  
+
+.mainContainer p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Form Container */
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  color: #ffffff;
+}
+
+form label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+}
+
+form textarea {
+  resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #008cba;
+  box-shadow: 0 0 5px rgba(0, 140, 186, 0.5);
+}
+
+form button {
+  background-color: #008cba;
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #005f7f;
+}
