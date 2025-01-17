@@ -11,7 +11,7 @@ function displayResults(results){
             const country = item.name.split(",");
             const options = { timeZone: country[1].trim().concat("/", country[0].trim()), hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
             const time = new Date().toLocaleTimeString('en-US', options);
-            console.log(item.name.concat(" ", time));
+
             const cardTime = document.createElement("div");
             cardTime.classList.add("resultCardTime");
             const titleTime = document.createElement("h3");
@@ -45,12 +45,19 @@ function displayResults(results){
 
 function filterKeyWord(data, keyword){
     keyword = keyword.toLowerCase();
-
+    var cities = [];
     if(keyword.includes("beach") || keyword.includes("beaches")) return data.beaches;
-    if(keyword.includes("temple") || keyword.includes("temples")) return data.temples;
-    if(keyword.includes("country") || keyword.includes("countries")) return data.countries.flatMap((country) => country.cities);
-
-    return [];
+    else if(keyword.includes("temple") || keyword.includes("temples")) return data.temples;
+    else if(keyword.includes("country") || keyword.includes("countries")) return data.countries.flatMap((country) => country.cities);
+    else {
+        data.countries.forEach((country) => {
+            const name = country.name.toLowerCase();
+            if(keyword.includes(name)){
+                cities = country.cities;
+            }    
+        });
+    }
+    return cities;
 }
 
 function handleSearch(){
