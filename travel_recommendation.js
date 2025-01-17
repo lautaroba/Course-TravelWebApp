@@ -6,6 +6,22 @@ const resultDiv = document.getElementById('resultDiv');
 function displayResults(results){
     resultDiv.innerHTML= "";
     results.forEach((item) => {
+        
+        try {
+            const country = item.name.split(",");
+            const options = { timeZone: country[1].trim().concat("/", country[0].trim()), hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
+            const time = new Date().toLocaleTimeString('en-US', options);
+            console.log(item.name.concat(" ", time));
+            const cardTime = document.createElement("div");
+            cardTime.classList.add("resultCardTime");
+            const titleTime = document.createElement("h3");
+            titleTime.textContent = item.name.concat(": ", time);
+            
+            cardTime.appendChild(titleTime);
+            resultDiv.appendChild(cardTime);
+        } catch (error) {
+            console.log("not aviable time");
+        }
 
         const card = document.createElement("div");
         card.classList.add("resultCard");

@@ -16,15 +16,20 @@
  
   .navbar {
     display: flex;
-    justify-content: space-between;
+    gap: 30vw;
     align-items: center;
     padding: 1rem 2rem;
     background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
     width: 100%;
-    z-index: 10;
   }
   
+  .navbar img {
+    filter: invert(1);
+    width: 50px;
+    width: 50px;
+  }
+
   .navbar nav a {
     color: white;
     text-decoration: none;
